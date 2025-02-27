@@ -1,0 +1,36 @@
+---
+import palestineFlag from '../assets/flag.webp'
+
+const links = [
+    // {
+    //     name: "Buy Olives",
+    //     link: "#buy"
+    // },
+
+    {
+        name: "About Us",
+        link: "#about",
+    },
+];
+---
+
+<nav class="sticky top-0 z-50 flex justify-between items-center p-8">
+    <a
+        href="/"
+        class="text-3xl font-extrabold tracking-tighter transform hover:scale-110 transition-transform"
+        >🫒 die Olive</a
+    >
+
+    <div class="md:flex space-x-6">
+        {
+            links.map((link) => (
+                <a
+                    href={link.link}
+                    class="text-xl hover:text-apple-green transform hover:scale-110 hover:-translate-y-2 transition-transform transition-colors"
+                >
+                    {link.name}
+                </a>
+            ))
+        }
+    </div>
+</nav>

@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+
+import itClubLogo from '../assets/it-logo.svg';
+import gitHubLogo from '../assets/github.svg';
+import linkedInLogo from '../assets/linkedin.svg';
+import instagramLogo from '../assets/instagram.svg';
+
+const logos = [
+    {
+        name: "IT-Club",
+        src: itClubLogo,
+        link: "https://it.gju.app/",
+    },
+
+    {
+        name: "GitHub",
+        src: gitHubLogo,
+        link: "https://github.com/SmartIronFox",
+    },
+
+    {
+        name: "Instagram",
+        src: instagramLogo,
+        link: "https://www.instagram.com/ali.m.frhn/"
+    },
+
+    {
+        name: "LinkedIn",
+        src: linkedInLogo,
+        link: "https://www.linkedin.com/in/ali-m-farhan/",
+    },
+];
+---
+
+<footer class="bottom-0 z-50 flex justify-center items-center p-6">
+    <div class="w-1/2 flex">
+        <div class="flex flex-row items-center justify-evenly space-x-4 w-full">
+            {
+                logos.map((logo) => {
+                    return (
+                        <a href={logo.link} target="_blank" class="h-full">
+                <picture>
+                    <img src={logo.src.src} alt={logo.name} class="h-full" />
+                </picture>
+                </a>
+            );
+            })
+            }          
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,9 @@
+---
+const {className = "", id} = Astro.props;
+---
+
+<section id={id} class=`px-10 flex justify-center items-top overflow-hidden lg:block ${className}`>
+    <div class="w-full mx-auto">
+        <slot />
+    </div>
+</section>
