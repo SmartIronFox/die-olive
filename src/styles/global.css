@@ -4,6 +4,8 @@
 @import "tailwindcss";
 
 @theme {
+    /* link for color palette: https://coolors.co/242016-444215-e6e775-9f9e0f-ffffff */
+    
     --color-eerie-black: hsla(43, 24%, 11%, 1);
     --color-drab-dark-brown: hsla(57, 53%, 17%, 1);
     --color-straw: hsla(61, 70%, 68%, 1);
